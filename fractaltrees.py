@@ -20,7 +20,7 @@ def branch(ITTERATION):
         POS = pen.position()
         pen.left(25)
         HEAD = pen.heading()
-        pen.forward(BRANCHES*12/ITTERATION)
+        pen.forward(100/ITTERATION)
         branch(ITTERATION + 1)
         
         #Reset
@@ -34,7 +34,7 @@ def branch(ITTERATION):
         #Right Branch
         pen.right(50)
         pen.down()
-        pen.forward(BRANCHES*12/ITTERATION)
+        pen.forward(100/ITTERATION)
         branch(ITTERATION + 1)
 
 
@@ -59,6 +59,12 @@ def colordisp(RED, GREEN, BLUE):
     pen.setposition(-600, 400)
     pen.down()
     pen.write("BLUE: " + BLUE, font=("Verdana",20, "normal"))
+
+    pen.up()
+    pen.color("GRAY")
+    pen.setposition(350, -525)
+    pen.down()
+    pen.write("By: Connor Powell", font=("Verdana",20, "normal"))
 
 
 #SETUP
