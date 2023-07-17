@@ -2,7 +2,7 @@ import turtle
 
 #Turtle Set Up with Window Set Up
 window = turtle.Screen()
-window.bgcolor("white")
+window.bgcolor("black")
 window.title("Fractal Tree")
 window.colormode(255)
 pen = turtle.Turtle()
@@ -12,7 +12,7 @@ pen.speed(0)
 BRANCHES = int(input("Enter a Number of Branches: "))
 def branch(ITTERATION):
     if ITTERATION < BRANCHES:
-        pen.color(0, 0, 0 + (255//BRANCHES)*ITTERATION)
+        pen.color(255 - (255//BRANCHES)*ITTERATION, 255 - (255//BRANCHES)*ITTERATION, 255)
         #Left Branch
         pen.down()
         POS = pen.position()
@@ -35,7 +35,7 @@ def branch(ITTERATION):
         branch(ITTERATION + 1)
 
 #Puts the pen in the starting positon
-pen.color(0, 0, (255//BRANCHES))
+pen.color(255, 255, 255)
 pen.up()
 pen.left(90)
 pen.setposition(0,-500)
